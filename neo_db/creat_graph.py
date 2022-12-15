@@ -2,6 +2,7 @@ from py2neo import Graph, Node, Relationship,NodeMatch
 from config import graph
 with open("../raw_data/relation.txt",encoding='utf-8') as f:
     for line in f.readlines():
+        #将文件中取出的每行字符串以逗号为分界符转化成列表
         rela_array=line.strip("\n").split(",")
         print(rela_array)
         graph.run("MERGE(p: Person{cate:'%s',Name: '%s'})"%(rela_array[3],rela_array[0]))

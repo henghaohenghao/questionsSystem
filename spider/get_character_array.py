@@ -3,7 +3,7 @@
 import codecs
 
 def get_character():
-    f = codecs.open('../raw_data/relation.txt','r','utf-8')
+    f = codecs.open('../raw_data/三国演义关系.txt','r','utf-8')
     data = []
     for line in f.readlines():
         #strip用于移除字符串头尾指定的字符或字符序列,默认为空格
